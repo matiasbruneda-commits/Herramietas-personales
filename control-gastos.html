@@ -347,17 +347,17 @@ async function guardar(type) {
   // Columnas: A=Fecha, B=Detalle, C=Categoria, D=Tipo, E=vacia, F=Salida Efectivo, G=Salida MP, H=USD(vacio)
   // I..R = vacias/ocultas, S=Ingreso Efectivo, T=Ingreso MP
   const row = [
-    fmtFecha(document.getElementById(px+'-fecha').value), // A
-    detalle,                                               // B
-    document.getElementById(px+'-cat').value,             // C
-    document.getElementById(px+'-tipo').value,            // D
-    '',                                                    // E vacía
-    fmtMoney(document.getElementById(px+'-s-ef').value),  // F Salida efectivo
-    fmtMoney(document.getElementById(px+'-s-mp').value),  // G Salida MP
-    '',                                                    // H USD vacío
-    '','','','','','','','','','',                        // I..R vacías (10 cols)
-    fmtMoney(document.getElementById(px+'-e-ef').value),  // S Ingreso efectivo
-    fmtMoney(document.getElementById(px+'-e-mp').value),  // T Ingreso MP
+    fmtFecha(document.getElementById(px+'-fecha').value), // A - Fecha
+    detalle,                                               // B - Detalle
+    document.getElementById(px+'-cat').value,             // C - Categoría
+    document.getElementById(px+'-tipo').value,            // D - Tipo
+    '',                                                    // E - vacía
+    fmtMoney(document.getElementById(px+'-s-ef').value),  // F - Salida efectivo
+    fmtMoney(document.getElementById(px+'-s-mp').value),  // G - Salida MP
+    '',                                                    // H - USD vacío
+    '','','','','','','','','','',                        // I..R - vacías (10 cols)
+    fmtMoney(document.getElementById(px+'-e-ef').value),  // S - Ingreso efectivo
+    fmtMoney(document.getElementById(px+'-e-mp').value),  // T - Ingreso MP
   ];
 
   showToast('Guardando...', '');
